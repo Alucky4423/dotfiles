@@ -2,7 +2,7 @@
 
  <g>
   <title>Layer 1</title>
-  <rect rx="10" stroke-width="10" id="svg_2" height="140" width="390" y="5" x="5" stroke="#000" fill="#fff"/>
+  <rect rx="10" stroke-width="10" id="svg_2" height="140" width="390" y="5" x="5" stroke="#ffab60" fill-opacity="0" />
   <text transform="matrix(1, 0, 0, 1, 0, 0)" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="31" id="svg_4" y="85.15833" x="19.76665" stroke-width="0" stroke="#000" fill="#000000">Alucky4423's dotfiles☕</text>
  </g>
 </svg>
