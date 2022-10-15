@@ -1,8 +1,16 @@
 <svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
 
  <g>
+  <style>
+    rect { stroke: #212121 }
+    text { stroke: none; fill: #212121  }
+    @media (prefers-color-scheme: dark) {
+      rect { stroke: #FFB74D  }
+      text { stroke: none; fill: #FFB74D }
+    }
+  </style>
   <title>Layer 1</title>
-  <rect rx="10" stroke-width="10" id="svg_2" height="140" width="390" y="5" x="5" stroke="#ffab60" fill-opacity="0" />
-  <text transform="matrix(1, 0, 0, 1, 0, 0)" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="31" id="svg_4" y="85.15833" x="19.76665" stroke-width="0" stroke="#000" fill="#000000">Alucky4423's dotfiles☕</text>
+  <rect rx="10" stroke-width="10" id="svg_2" height="140" width="390" y="5" x="5" fill-opacity="0" />
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="30" y="85.15833" x="19.76665" stroke-width="0">Alucky4423's dotfiles☕</text>
  </g>
 </svg>
