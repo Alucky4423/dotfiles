@@ -1,0 +1,30 @@
+[core]
+	# 改行コードの自動変換
+	autocrlf = false
+	# ファイル名の大文字と小文字を区別する
+	ignorecase = false
+	# 日本語ファイル名をエンコードしない
+	quotepath = false
+
+[color]
+	ui = true
+
+[init]
+	defaultBranch = main
+
+[merge]
+	# Fast forward でも merge commit を作成する
+	ff = false
+
+[pull]
+	# Fast forward 可能な場合のみmerge. それ以外はエラー
+	ff = only
+
+[alias]
+	# ログをいい感じに表示する
+	graph = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	# graph の省略形
+	gr = graph
+	st = status
+	cm = commit
+
