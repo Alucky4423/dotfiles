@@ -1,28 +1,27 @@
 #!/bin/bash
 
 cat <<- DESC
-
-                d88P       8888888b.   .d88888b. 88888888888 8888888888 8888888 888      8888888888 .d8888b.  
-               d88P        888  "Y88b d88P" "Y88b    888     888          888   888      888       d88P  Y88b 
- d888b  d88   d88P         888    888 888     888    888     888          888   888      888       Y88b.      
-d888888888P  d88P          888    888 888     888    888     8888888      888   888      8888888    "Y888b.   
-88P  Y888P  d88P           888    888 888     888    888     888          888   888      888           "Y88b. 
-           d88P            888    888 888     888    888     888          888   888      888             "888 
-          d88P    d8b      888  .d88P Y88b. .d88P    888     888          888   888      888       Y88b  d88P 
-         d88P     Y8P      8888888P"   "Y88888P"     888     888        8888888 88888888 8888888888 "Y8888P"  
+                d88P       8888888b.   .d88888b. 88888888888 8888888888 8888888 888      8888888888 .d8888b. 
+               d88P        888  "Y88b d88P" "Y88b    888     888          888   888      888       d88P  Y88b
+ d888b  d88   d88P         888    888 888     888    888     888          888   888      888       Y88b.     
+d888888888P  d88P          888    888 888     888    888     8888888      888   888      8888888    "Y888b.  
+88P  Y888P  d88P           888    888 888     888    888     888          888   888      888           "Y88b.
+           d88P            888    888 888     888    888     888          888   888      888             "888
+          d88P    d8b      888  .d88P Y88b. .d88P    888     888          888   888      888       Y88b  d88P
+         d88P     Y8P      8888888P"   "Y88888P"     888     888        8888888 88888888 8888888888 "Y8888P" 
 
 DESC
 
 # Variables
-ROOT=$HOME/tmp
-REPOSITORY_URL=https://github.com/Alucky4423/dotfiles.git
-INSTALL_PATH=${ROOT}/.dotfiles.git
-BACKUP_DIR=${ROOT}/backup-dotfiles
+declare -r           ROOT=$HOME
+declare -r REPOSITORY_URL=https://github.com/Alucky4423/dotfiles.git
+declare -r   INSTALL_PATH=${ROOT}/.dotfiles.git
+declare -r     BACKUP_DIR=${ROOT}/backup-dotfiles
 # Functions
 function NewLine() { echo ""; }
-function MSG()   { echo -e "\033[1;32m[MSG] $*\033[0m"; }
-function INFO()  { echo -e "\033[1;34m[INFO]$*\033[0m"; }
-function ERR()   { echo -e "\033[1;31m[ERR] $*\033[0m"; }
+function MSG()   { echo -e "\033[1;32m[MSG] :$*\033[0m"; }
+function INFO()  { echo -e "\033[1;34m[INFO]:$*\033[0m"; }
+function ERR()   { echo -e "\033[1;31m[ERR] :$*\033[0m"; }
 
 # TODO:
 #   install package manager.
@@ -36,8 +35,7 @@ MSG "Please input [user.name] and [user.email]."
 # GITCONFIG_KEYS=("user.name" "user.email")
 for KEY in "user.name" "user.email"; do
   echo -n "$KEY >> "; read -r INPUT
-  # TODO: DEBUG
-  INFO git config --global "$KEY" "$INPUT"
+  git config --global "$KEY" "$INPUT"
 done
 INFO "Show git config --globals\n$(git config --global --list)"
 NewLine
@@ -75,4 +73,11 @@ if [ $RESULT -ne 0 ]; then
   __config checkout; RESULT=$?
 fi;
 [ $RESULT -eq 0 ] && MSG "Complete Checkout.\n"
+
+INFO "Create an alias to interact with the configuration repository."
+cat <<- DESC
+# Example: 
+alias config='git --git-dir=\$HOME/.dotfiles.git/ --work-tree=\$HOME'"
+
+DESC
 
