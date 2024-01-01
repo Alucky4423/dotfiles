@@ -1,5 +1,5 @@
 <br />
-<div align="center">
+<div align="center" style="font-family:monospace;">
   <img src="./assets/dotfiles-logo.svg"
        alt="logo"
        width="80"
