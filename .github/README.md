@@ -16,3 +16,7 @@ config checkout
 
 - https://www.atlassian.com/git/tutorials/dotfiles
 
+## LICENSE
+
+- MIT License
+
