@@ -1,14 +1,6 @@
-<br />
-<div align="center" style="font-family:monospace;">
-  <img src="./assets/dotfiles-logo.svg"
-       alt="logo"
-       width="80"
-       height="80" />
+# Alucky4423's dotfiles
 
-  <h3>Aleucky's dotfiles ☕</h3>
-</div>
-
-## Usage
+## Installation
 
 ```
 git clone --bare https://github.com/Alucky4423/dotfiles.git $HOME/.dotfiles.git
@@ -20,7 +12,7 @@ config checkout
 ```
 
 
-## Reference
+## References
 
 - https://www.atlassian.com/git/tutorials/dotfiles
 
